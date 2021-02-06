@@ -1,7 +1,5 @@
 
-# Project Name
-
-<img src='https://img.shields.io/badge/license-BSD-black'/>
+# Project Name  <img src='https://img.shields.io/badge/license-MIT-black'/>
 
 ## Description
 Description
@@ -23,13 +21,13 @@ npm i
 ```
 
 ## Usage
-Download the repo!
+download to use
 
 ## License
-This application is covered under BSD licensing
-
+This application is covered under MIT licensing
+    
 ## Contribution 
-To contribute to the repository, email me!
+To contribute to the repository, email me
 
 ## Tests
 To run tests input: 
@@ -41,3 +39,4 @@ npm test
 ## Questions
 For any questions, please contact me via [email](mailto:emily@yahoo.com) or find me on github @Emilykidd3
 
+    
