@@ -1,5 +1,7 @@
+// uses fs
 const fs = require('fs');
 
+// writes file to md file
 const writeFile = fileContent => {
     return new Promise ((resolve, reject) => {
         fs.writeFile('./dist/readme.md', fileContent, err => {
@@ -16,4 +18,5 @@ const writeFile = fileContent => {
     });
 };
 
+// exports to index.js
 module.exports = writeFile;

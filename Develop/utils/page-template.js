@@ -1,3 +1,4 @@
+// generates license section
 const generateLicense = license => {
     if (license === 'None') {
         return '';
@@ -8,6 +9,7 @@ This application is covered under ${license} licensing
     `
 };
 
+// generates license section in table of contents
 const generateLicenseTOC = license => {
     if (license === 'None') {
         return '';
@@ -16,6 +18,7 @@ const generateLicenseTOC = license => {
 * [License](#license)`
 };
 
+// generates license badge
 const generateLicenseBadge = license => {
     if (license === 'None') {
         return '';
@@ -23,6 +26,7 @@ const generateLicenseBadge = license => {
     return `<img src='https://img.shields.io/badge/license-${license.replace(' ', '%20')}-black'/>`
 }
 
+// writes page with input from init prompt
 const writePage = function(questionAnswers) {
     console.log(questionAnswers)
 
@@ -69,6 +73,7 @@ For any questions, please contact me via [email](mailto:${email}) or find me on 
     `
 }
 
+// exports to index.js
 module.exports = writePage;
 
 

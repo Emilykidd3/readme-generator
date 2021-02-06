@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application and links to other js files
 const inquirer = require('inquirer');
 const writePage = require('./develop/utils/page-template.js');
 const writeFile = require('./develop/utils/generate-file.js');
 
+// questions to ask in command line
 const questions = [
     {
         type:'input',
@@ -66,7 +67,7 @@ const questions = [
     }
 ];
 
-// TODO: Create an array of questions for user input
+// function to ask questions
 const init =  () => {
     return inquirer.prompt(questions)
     .then(questionAnswers => {
@@ -78,6 +79,7 @@ const init =  () => {
     })
 };
 
+// validates answers to question to make sure there is input
 var validateAnswers = function(input) {
     if (input) {
         return true;
@@ -87,4 +89,5 @@ var validateAnswers = function(input) {
     }
 };
 
+// runs function
 init();
