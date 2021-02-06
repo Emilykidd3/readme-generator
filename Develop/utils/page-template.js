@@ -4,43 +4,52 @@ var writePage = function(questionAnswers) {
     // destructure answers
     const { github, email, projectName, description, license, installation, tests, usage, contribution } = questionAnswers
 
-    return `
-    # ${projectName}
+return `
+# ${projectName}
 
-    ## Description
-    ${description}
+<img src='https://img.shields.io/badge/license-${license.replace(' ', '%20')}-black'/>
 
-    ## Table of Contents
+## Description
+${description}
 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contribution](#contribution)
-    * [Tests](#tests)
-    * [Questions](#questions)
+## Table of Contents
 
-    ## Installation
-    To install dependencies, use
-        ${installation}
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [Questions](#questions)
 
-    ## Usage
-    ${usage}
+## Installation
+To install dependencies, use
 
-    ## License
-    <img src='https://img.shields.io/badge/license-${license.replace(' ', '%20')}-black'>
+\`\`\`
+${installation}
+\`\`\`
 
-    ## Contribution 
-    To contribute to the repository, ${contribution}
+## Usage
+${usage}
 
-    ## Tests
-    To run tests input: 
-        ${tests}
+## License
+This application is covered under ${license} licensing
 
-    ## Questions
-    For any questions, please contact me via [email](mailto:${email})
+## Contribution 
+To contribute to the repository, ${contribution}
 
-    ### Created by ${github}
-    `
+## Tests
+To run tests input: 
+
+\`\`\`
+${tests}
+\`\`\`
+
+## Questions
+For any questions, please contact me via [email](mailto:${email}) or find me on github @${github}
+
+`
 }
 
 module.exports = writePage;
+
+

@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer')
-const writePage = require('./develop/utils/page-template.js')
+const inquirer = require('inquirer');
+const writePage = require('./develop/utils/page-template.js');
+const writeFile = require('./develop/utils/generate-file.js');
 
 // TODO: Create an array of questions for user input
 const questions =  () => {
@@ -45,13 +46,13 @@ const questions =  () => {
             type:'input',
             name: 'installation',
             message: 'What command should be run to install dependencies?',
-            validate: validateAnswers
+            default: 'npm i'
         },
         {
             type:'input',
             name: 'tests',
             message: 'What command should be run to run tests?',
-            validate: validateAnswers
+            default: 'npm test'
         },
         {
             type:'input',
@@ -67,7 +68,9 @@ const questions =  () => {
         }
     ])
     .then(questionAnswers => {
-        return questionAnswers;
+        console.log(questionAnswers);
+        let templateData = writePage(questionAnswers);
+        writeFile(templateData);
     })
 };
 
@@ -80,5 +83,6 @@ var validateAnswers = function(input) {
     }
 }
 
-questions()
-    .then(writePage);
+questions();
+//     .then(writePage)
+//     .then(writeFile);
