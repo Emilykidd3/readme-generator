@@ -16,3 +16,7 @@ https://drive.google.com/file/d/1MtBfy4tzj7DttjpcWqDd-nNBui2G4Wr4/view
 
 ## Contribution
 Made by Emily Kidd
+
+## Contact
+[GitHub](github.com/emilykidd3)  
+[Email](mailto:e.kidd61@yahoo.com)
